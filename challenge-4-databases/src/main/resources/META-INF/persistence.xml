@@ -1,0 +1,27 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="supermercadoPU">
+        <class>org.excersice_1.models.Venta</class>
+        <class>org.excersice_1.models.Cliente</class>
+        <class>org.excersice_1.models.Producto</class>
+        <class>org.excersice_1.models.Marca</class>
+        <properties>
+            <!-- Configuración de la conexión a la base de datos -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/nodo_testing" />
+            <property name="jakarta.persistence.jdbc.user" value="postgres" />
+            <property name="jakarta.persistence.jdbc.password" value="d4lion#031" />
+
+            <!-- Habilitar logs SQL -->
+            <property name="jakarta.persistence.logging.level" value="FINE"/>
+
+            <!-- Crear tablas automáticamente -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+
+            <!-- Dialecto de la base de datos -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.show_sql" value="true" />
+            <property name="hibernate.format_sql" value="true" />
+        </properties>
+    </persistence-unit>
+</persistence>
