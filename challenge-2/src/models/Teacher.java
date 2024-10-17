@@ -2,6 +2,7 @@ package models;
 
 import domains.Salaried;
 
+
 public class Teacher extends Salaried {
     private final String project;
     private final String subject;
